@@ -6,4 +6,3 @@ last_name="ВашеПрізвище"
 
 echo "Ім'я: $first_name"
 echo "Прізвище: $last_name"
-docker build -t my-docker-image .

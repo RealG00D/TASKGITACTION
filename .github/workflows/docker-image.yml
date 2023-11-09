@@ -6,15 +6,15 @@ on:
       - main
 
 jobs:
-  display-name:
+  display_name:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Отримати код
+      - name: Checkout code
         uses: actions/checkout@v2
 
-      - name: Налаштувати Docker
-        run: docker setup
-
-      - name: Запустити Docker контейнер
-        run: docker run --rm -v "$(pwd):/app" your-docker-image-name bash -c 'display_name.sh'
+      - name: Run Bash Script
+        run: |
+          # Ваш bash-скрипт тут, який виводить ваше ім'я та прізвище
+          echo "Ім'я: Олег"
+          echo "Прізвище: Деревецький"

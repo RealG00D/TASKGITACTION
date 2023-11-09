@@ -12,7 +12,10 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v2
 
-
+      - name: Build Docker Image
+        run: docker build -t my-docker-image .
+        working-directory: ./Dockerfile
+      
       - name: Run Bash Script
         run: chmod +x display_name.sh 
       - name: Run Bash Script

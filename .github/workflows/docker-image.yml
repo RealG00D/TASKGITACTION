@@ -13,8 +13,11 @@ jobs:
         uses: actions/checkout@v2
 
       - name: Build Docker Image
-        run: docker build -t my-docker-image .
-        working-directory: Dockerfile
+        run: docker build -t my-docker-image .  # Вказуємо поточний каталог (main)
+        working-directory: ./main  # Вказуємо робочий каталог
+
+      - name: Run Docker Container
+        run: docker run my-docker-image
       
       - name: Run Bash Script
         run: chmod +x display_name.sh 

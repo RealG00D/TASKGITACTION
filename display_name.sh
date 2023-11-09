@@ -1,5 +1,5 @@
 #!/bin/bash
-
+chmod +x "$0"
 
 first_name="Олег"
 last_name="Деревецький"

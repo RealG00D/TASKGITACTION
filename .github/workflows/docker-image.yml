@@ -1,0 +1,20 @@
+name: Docker Image CI
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  display-name:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Отримати код
+        uses: actions/checkout@v2
+
+      - name: Налаштувати Docker
+        run: docker setup
+
+      - name: Запустити Docker контейнер
+        run: docker run --rm -v "$(pwd):/app" your-docker-image-name bash -c '/app/display_name.sh'

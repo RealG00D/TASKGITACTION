@@ -30,4 +30,4 @@ name: Run Docker Container
     
 name: Execute Bash Script
     run: |
-      chmod +x TASKGITACTION/display_name.sh'
+      chmod +x TASKGITACTION./display_name.sh'

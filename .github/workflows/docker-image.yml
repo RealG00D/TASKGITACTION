@@ -14,4 +14,4 @@ jobs:
 
       - name: Run Bash Script
         run: |
-          display_name.sh
+          chmod +x display_name.sh

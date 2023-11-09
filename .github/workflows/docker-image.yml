@@ -12,9 +12,7 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v2
 
-      - name: Run Bash Script
-        run: |
-            chmod +x display_name.sh
+
       - name: Run Bash Script2
         run: ./display_name.sh
 
